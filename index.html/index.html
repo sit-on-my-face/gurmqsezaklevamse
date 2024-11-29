@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        .message {
+            font-size: 24px;
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Fun Page! :wink:</h1>
+    
+    <div id="initial-message">
+        <p class="message">Be my GF! <span>❤️</span> <span>:stuck_out_tongue_winking_eye:</span></p>
+        <button onclick="showResponse(true)">Yes</button>
+        <button onclick="showResponse(false)">No</button>
+    </div>
+
+    <div id="yes-response" class="hidden">
+        <p class="message">Shte te izqm dimanke! <span>:face_with_hand_over_mouth:</span> <span>:yum:</span></p>
+    </div>
+
+    <div id="no-response" class="hidden">
+        <p class="message">Oh well, maybe next time! :pouting_face:</p>
+    </div>
+
+    <script>
+        function showResponse(isYes) {
+            document.getElementById('initial-message').classList.add('hidden');
+            if (isYes) {
+                document.getElementById('yes-response').classList.remove('hidden');
+            } else {
+                document.getElementById('no-response').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
